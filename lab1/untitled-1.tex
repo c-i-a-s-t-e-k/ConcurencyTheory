@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{Mnożenie macierzy}
+\author{Dominik Jeżów}
+\author{Szymon Twardosz}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Użyte środowisko i język}
+Do wykonania ćwiczenia wykorzystaliśmy jęztk python 3.11 wraz z następujęcymi bibliotekami
+numpy, matplotlib oraz time
+
+\section{Temat zadania}
+Zadanie polegało na zaimplementowaniu 3 różnych metod mnożenia macierzy kwadratowych o wymiarach będących potęgą liczby 2. Są to kolejno:
+\begin{description}
+    \item[Metoda Bin\grave{e}t'a] Najprostsza metoda rekurencyjna polegająca na obliczeniu macierzy wynikowej na podstawie 4 oddzielnych fragmentów
+    \item[Metoda Strassena] Podobna do powyrzszej metody z tą różnicą że dzielimy macierz na więcej części aby zmniejszyć ilość wykonanych operacji arytmetycznych.
+    \item[Metoda Alpha Tensor] Tak jak wyżej tylko, że ilość na którą została podzielona macierz została znaleziona przez model sztucznej inteligencji.
+  \end{description}
+
+\section{Wyniki}
+\begin{description}
+    \item[Metoda Bin\grave{e}t'a] Metoda ta otrzymała wynkiki w
+    najszybszym czasie - dla macierzy kwadratowytch o wymiarze 1024 otrzymał wynik w czasie prawie 2 razy szybszym od metody Strassena.
+    \item[Metoda Strassena] Opis drugiego elementu.
+    \item[Metoda Alpha Tensor] Opis trzeciego elementu.
+  \end{description}
+
+\subsection{Porównanie czasów wykonania}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{output2.png}
+    \caption{Opis obrazu}
+    \label{fig:obraz}
+\end{figure}
+
+\subsection{Porównanie wykonanych operacji arytmetycznych}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{output.png}
+    \caption{Opis obrazu}
+    \label{fig:obraz}
+\end{figure}
+
+\section{Wnioski}
+Mimo że metoda Alpha Tensor oraz Strassena wymagoją mniejszej liczby operacji algorytmicznej to poprzez jej niefektywnej implementacji nie osiągają one leprzych wyników czasowych co metoda Bin\grave{e}t'a 
+\end{document}
