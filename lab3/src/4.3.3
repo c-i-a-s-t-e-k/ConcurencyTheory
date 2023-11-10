@@ -1,0 +1,44 @@
+    Napisz monitor synchronizujący działanie P producentÛw i K konsumentÛw korzystających ze
+    wspÛlnego bufora, w ktÛrym może się pomieścić 2*M nierozrÛżnialnych elementÛw (ich
+    kolejność nie jest istotna). Bufor ma być ukryty w monitorze. Producer wstawia do bufora
+    losową liczbę elementÛw, konsument pobiera rÛwnież losową liczbę elementÛw, przy czym w
+    obu przypadkach liczby te są nie większe niż M. Wyjaśnij, po co to założenie. Można przyjąć,
+    że istnieją procedury kopiujące do/z bufora (procedury te nie modyfikują liczby elementÛw
+    zajętych w buforze). Parametr ile określa rzeczywistą liczbę elementÛw przenoszonych między
+    buforem a porcją p:
+
+monitor BUFOR;
+const M = ?;
+type porcja = array [1..M] of element;
+var bufor: array[0..2M-l] of porcja;
+ile_w_bufforze, do.włożenia, do.wyjęcia: integer;
+PRODUCENCI, KONSUMENCI: condition;
+
+procedure do_bufora(ile:integer; p:porcja);
+begin
+ if ile_w_bufforze + ile >= N then wait(PRODUCENCI);
+ for(i := 0; i<ile; i++)
+ begin
+     ile_w_buforze ++;
+     do_włożenia := (do.wlożenia + 1) mod N;
+     bufor[do_włożenia] := element;
+ end
+ signal(KONSUMENCI)
+end; {do_bufora}
+
+procedure z_bufora ile:integer; var p:porcja);
+begin
+ if ile_w_bufforze - ile <= O then wait(KONSUMENCI);
+ for(i := 0; i<ile; i++)
+ begin
+     do.wyjęcia := (do.wyjecia + 1) mod N;
+     element := bufor [do_wyjecia];
+     ile := ile - 1;
+ end
+ signal(PRODUCENCI)
+end; {POBIERZ}
+begin
+ ile := 0;
+ do_włożenia := 0;
+ do_wyjecia := O
+end; {BUFOR}
