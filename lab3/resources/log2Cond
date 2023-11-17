@@ -1,0 +1,54 @@
+params: C1-C5 bound 2, C6 bound 7, P bound 2
+----------------------------------
+
+C1 runs 19088 times
+P1 runs 22528 times
+C2 runs 17317 times
+P2 runs 21148 times
+C3 runs 15202 times
+P3 runs 23906 times
+C4 runs 20067 times
+P4 runs 24641 times
+C5 runs 26169 times
+P5 runs 26456 times
+C6 runs 5966 times
+
+-----------------------------
+
+C1 runs 2095 times
+P1 runs 1710 times
+C2 runs 3122 times
+P2 runs 2133 times
+C3 runs 2045 times
+P3 runs 1920 times
+C4 runs 1193 times
+P4 runs 2973 times
+C5 runs 2993 times
+P5 runs 3971 times
+C6 runs 379 times
+
+----------------------------------
+C1 runs 30696 times
+P1 runs 34989 times
+C2 runs 20974 times
+P2 runs 30518 times
+C3 runs 33752 times
+P3 runs 36130 times
+C4 runs 28207 times
+P4 runs 30615 times
+C5 runs 27648 times
+P5 runs 41580 times
+C6 runs 9296 times
+
+---------------------------------
+C1 runs 26567 times
+P1 runs 26691 times
+C2 runs 22997 times
+P2 runs 29816 times
+C3 runs 25538 times
+P3 runs 27811 times
+C4 runs 21403 times
+P4 runs 27203 times
+C5 runs 26866 times
+P5 runs 25489 times
+C6 runs 3917 times
