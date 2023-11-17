@@ -1,0 +1,71 @@
+params: C1-C5 bound 2, C6 bound 7, P bound 2
+
+C1 runs 21602 times
+P1 runs 42348 times
+C2 runs 39054 times
+P2 runs 34094 times
+C3 runs 33668 times
+P3 runs 31942 times
+C4 runs 32255 times
+P4 runs 33267 times
+C5 runs 38120 times
+P5 runs 41775 times
+C6 runs 5343 times
+
+--------------------------------------------------
+C1 runs 36497 times
+P5 want to produce 1 Value = 11
+P5 Produced 1
+
+P1 runs 53918 times
+P5 want to produce 1 Value = 12
+P5 Produced 1
+
+C2 runs 46102 times
+P5 want to produce 1 Value = 13
+P5 Produced 1
+
+P2 runs 41863 times
+C3 runs 44978 times
+P3 runs 38463 times
+C4 runs 46962 times
+P4 runs 40370 times
+P5 want to produce 1 Value = 14
+P5 Produced 1
+
+C5 runs 31295 times
+P5 want to produce 1 Value = 15
+P5 is waiting on first Producers
+
+P5 runs 41616 times
+C6 runs 2991 times
+
+------------------------------------------
+C1 runs 34182 times
+P1 runs 51150 times
+C2 runs 37833 times
+P2 runs 39747 times
+C3 runs 27886 times
+P3 runs 32866 times
+C4 runs 40825 times
+P4 runs 33912 times
+C5 runs 32369 times
+P5 runs 30302 times
+C6 runs 4264 times
+
+----------------------------------------
+C1 runs 21072 times
+P1 runs 23193 times
+C2 runs 24125 times
+P2 runs 21982 times
+C3 runs 17556 times
+P3 runs 22843 times
+C4 runs 18746 times
+P4 runs 24078 times
+C5 runs 19129 times
+P5 runs 16056 times
+C6 runs 2183 times
+
+
+
+# widać że C6 zawsze ma małow wykonań ()

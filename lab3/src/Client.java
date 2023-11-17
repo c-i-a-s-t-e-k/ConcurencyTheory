@@ -12,8 +12,6 @@ public class Client extends Person{
         while (true){
             int toConsume = 1 + super.random.nextInt(bound - 1);
             super.world.consume(toConsume, this);
-            System.out.println(introduce() + " Consumed " + toConsume);
-            world.newLine();
             runs ++;
         }
     }

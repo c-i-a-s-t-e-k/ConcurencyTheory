@@ -1,10 +1,10 @@
+import java.util.List;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class World {
-    private int lines = 0;
-    private int value = 0;
+    private int value = 14;
     private final int bufferSize;
     private final Lock lock = new ReentrantLock();
     private final Condition producerCond = lock.newCondition();
@@ -18,54 +18,48 @@ public class World {
     public void produce(int toProduce, Person person){
         try {
             lock.lock();
-            while (!canProduce(toProduce)){
-                if (isFirstProducerEmpty){
-                    firstProducerCond.await();
-                    isFirstProducerEmpty = false;
-                }else {
-                    producerCond.await();
-                }
-                System.out.println(person.introduce() + " is waiting");
-                newLine();
+            System.out.println(person.introduce() + " want to produce " + toProduce + " Value = " + this.value);
+            while (!isFirstProducerEmpty) {
+                System.out.println(person.introduce() + " is waiting on Producer\n");
+                producerCond.await();
+            }
+            while (!canProduce(toProduce)) {
+                System.out.println(person.introduce() + " is waiting on first Producers\n");
+                isFirstProducerEmpty = false;
+                firstProducerCond.await();
             }
             this.value += toProduce;
-            if (isFirstConsumerEmpty){
-                consumerCond.signal();
-                isFirstConsumerEmpty = true;
-            }
-            else {
-                firstConsumerCond.signal();
-            }
+            System.out.println(person.introduce() + " Produced " + toProduce + "\n");
+
+            isFirstConsumerEmpty = true;
+            consumerCond.signal();
+            firstConsumerCond.signal();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
             lock.unlock();
         }
-
     }
 
     public void consume(int toConsume, Person person){
         try {
             lock.lock();
-            while (!canConsume(toConsume)){
-                if (isFirstConsumerEmpty){
-                    isFirstConsumerEmpty = false;
-                    firstConsumerCond.await();
-                }
-                else{
-                    consumerCond.await();
-                }
-                System.out.println(person.introduce() + " is waiting");
-                newLine();
+            System.out.println(person.introduce() + " want to consume " + toConsume + " Value = " + this.value);
+            while (!isFirstConsumerEmpty) {
+                System.out.println(person.introduce() + " is waiting on Consumer\n");
+                consumerCond.await();
+            }
+            while (!canConsume(toConsume)) {
+                System.out.println(person.introduce() + " is waiting on first Consumers\n");
+                isFirstConsumerEmpty = false;
+                firstConsumerCond.await();
             }
             this.value -= toConsume;
-            if (isFirstProducerEmpty){
-                producerCond.signal();
-                isFirstProducerEmpty = true;
-            }
-            else {
-                firstProducerCond.signal();
-            }
+            System.out.println(person.introduce() + " Consumed " + toConsume + "\n");
+
+            isFirstProducerEmpty = true;
+            producerCond.signal();
+            firstProducerCond.signal();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
@@ -83,18 +77,5 @@ public class World {
     public World(int size){
         this.bufferSize = size;
     }
-
-    public void newLine(){
-        try {
-            lock.lock();
-            lines += 1;
-            if (lines % 5 == 0){
-                System.out.println();
-            }
-        } finally {
-            lock.unlock();
-        }
-    }
-
 }
 

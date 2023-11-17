@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -21,16 +23,18 @@ public abstract class Person extends Thread {
     @Override
     public abstract void run();
     public abstract String introduce();
-    public void showStats(){
-        System.out.println(introduce() + " runs " + runs + " times");
+    public String stats(){
+        return introduce() + " runs " + runs + " times";
     }
 
-    public static void killWorkers(){
+    public static void killWorkers() {
         for(Person person : peoples){
             person.interrupt();
         }
-        for(Person person : peoples){
-            person.showStats();
+        for (Person person : peoples){
+            System.out.println(person.stats());
         }
     }
+
 }
+

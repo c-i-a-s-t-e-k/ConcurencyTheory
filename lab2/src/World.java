@@ -6,28 +6,25 @@ public class World {
     public synchronized void produce(){
         while (World.canConsume()){
             try {
-//                System.out.println("wait: produce");
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
         }
         World.value = 1;
-        notifyAll();
+        notify();
     }
 
     public synchronized void consume(){
         while (!World.canConsume()){
             try {
-//                System.out.println("wait: consume");
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
         World.value = 0;
-        notifyAll();
+        notify();
     }
 
     private static boolean canConsume(){

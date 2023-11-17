@@ -12,8 +12,6 @@ public class Producer extends Person{
         while (true) {
             int toProduce = 1 + super.random.nextInt(bound - 1);
             super.world.produce(toProduce, this);
-            System.out.println(introduce() + " Produced " + toProduce);
-            world.newLine();
             runs++;
         }
     }
