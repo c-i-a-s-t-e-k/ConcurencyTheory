@@ -1,0 +1,35 @@
+P1, P2, P3
+C1
+
+value = 0/4
+
+firstP \3 1
+firstC
+
+restP
+restC
+
+P1 2
+value = 2
+
+P2 2
+value = 4
+
+P3 2
+firstP
+
+P1/P2/Cx
+
+C1 1
+value 1
+sigal firstP
+
+P1 2
+
+
+----------------------------------------
+
+1 producent, 1 konsument
+
+
+

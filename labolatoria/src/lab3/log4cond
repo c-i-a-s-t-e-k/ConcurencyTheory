@@ -1,0 +1,117 @@
+buff_size = 15
+C1 - max 2
+C2 - max 7
+P1 - max 2
+
+
+C1 runs 4033 times
+P1 runs 30860 times
+C2 runs 7737 times
+
+C1 runs 2772 times
+P1 runs 17386 times
+C2 runs 4168 times
+
+C1 runs 2151 times
+P1 runs 27229 times
+C2 runs 7165 times
+
+C1 runs 1323 times
+P1 runs 27462 times
+C2 runs 7454 times
+
+----------------------------------------
+C1 - max 7
+C2 - max 2
+P1 - max 7
+
+C1 runs 8902 times
+P1 runs 10276 times
+C2 runs 4809 times
+
+C1 runs 9053 times
+P1 runs 10024 times
+C2 runs 3328 times
+
+C1 runs 11655 times
+P1 runs 13101 times
+C2 runs 4933 times
+
+----------------------------------------
+buff size 15
+Cx, Px - max 7
+
+
+C1 runs 2182 times
+P1 runs 1118 times
+C2 runs 1577 times
+P2 runs 4010 times
+C3 runs 3848 times
+P3 runs 2911 times
+C4 runs 1314 times
+P4 runs 1825 times
+C5 runs 3448 times
+P5 runs 2480 times
+
+C1 runs 1354 times
+P1 runs 2518 times
+C2 runs 725 times
+P2 runs 2240 times
+C3 runs 4333 times
+P3 runs 1097 times
+C4 runs 2260 times
+P4 runs 3996 times
+C5 runs 2416 times
+P5 runs 1168 times
+
+C1 runs 2388 times
+P1 runs 2445 times
+C2 runs 3375 times
+P2 runs 1164 times
+C3 runs 864 times
+P3 runs 3464 times
+C4 runs 799 times
+P4 runs 2110 times
+C5 runs 3441 times
+P5 runs 1864 times
+
+----------------------------------------
+buff size 15
+C6 - max 7
+rest - max 2
+
+C1 runs 1453 times
+P1 runs 4451 times
+C2 runs 1006 times
+P2 runs 5053 times
+C3 runs 510 times
+P3 runs 4971 times
+C4 runs 955 times
+P4 runs 2990 times
+C5 runs 258 times
+P5 runs 3089 times
+C6 runs 4718 times
+
+C1 runs 2051 times
+P1 runs 4164 times
+C2 runs 228 times
+P2 runs 3946 times
+C3 runs 1110 times
+P3 runs 5754 times
+C4 runs 424 times
+P4 runs 4339 times
+C5 runs 906 times
+P5 runs 3459 times
+C6 runs 4880 times
+
+C1 runs 330 times
+P1 runs 3511 times
+C2 runs 1028 times
+P2 runs 3190 times
+C3 runs 193 times
+P3 runs 5463 times
+C4 runs 704 times
+P4 runs 4052 times
+C5 runs 832 times
+P5 runs 3714 times
+C6 runs 4733 times

@@ -1,0 +1,1 @@
+rozwiązanie na 3 lock i jednym cond
