@@ -1,0 +1,39 @@
+4cond:
+Time: 765625000 ns
+Total value buffer change: 74273
+
+Time: 1031250000 ns
+Total value buffer change: 127586
+
+Time: 2281250000 ns
+Total value buffer change: 272260
+
+Time: 4937500000 ns
+Total value buffer change: 602961
+
+Time: 7031250000 ns
+Total value buffer change: 861568
+
+Time: 9062500000 ns
+Total value buffer change: 1126393
+
+------------------------------------------------------------------
+3lock:
+
+Time: 796875000 ns
+Total value buffer change: 66035
+
+Time: 1625000000 ns
+Total value buffer change: 171458
+
+Time: 3328125000 ns
+Total value buffer change: 335588
+
+Time: 4906250000 ns
+Total value buffer change: 529606
+
+Time: 6781250000 ns
+Total value buffer change: 706167
+
+Time: 9500000000 ns
+Total value buffer change: 1009737

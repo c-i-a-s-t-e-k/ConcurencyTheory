@@ -1,20 +1,16 @@
-package lab3;
-
-
+package lab5;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Person extends Thread {
     public static List<Integer> stats = new ArrayList<>();
     private static final List<Person> peoples = new ArrayList<>();
     private static long startTime;
     private static long endTime;
-
     protected boolean shouldWork = true;
     protected int iterations;
 
@@ -31,6 +27,7 @@ public abstract class Person extends Thread {
         this.bound = bound;
         this.iterations = iterations;
     }
+
     public void addWorker(){
         peoples.add(this);
     }
@@ -48,18 +45,20 @@ public abstract class Person extends Thread {
     public String stats(){
         return introduce() + " runs " + runs + " times, spent " + spentValue;
     }
+
     public static void stopWorkers(){
         for(Person person : peoples){
             person.shouldWork = false;
         }
     }
+
     public static void killWorkers() {
         long cpuTime =0;
         for(Person person : peoples){
             cpuTime += getCpuTime(person.getId());
             person.interrupt();
         }
-        endTime = System.currentTimeMillis();
+        long endTime = System.currentTimeMillis();
         int allSpent = 0;
         int allRuns = 0;
         for (Person person : peoples){
